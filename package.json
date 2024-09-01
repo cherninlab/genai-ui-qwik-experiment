@@ -44,11 +44,17 @@
     "eslint": "8.57.0",
     "eslint-plugin-qwik": "^1.8.0",
     "prettier": "3.3.3",
+    "qwik-image": "^0.0.13",
+    "qwikjs-wrap-balancer": "^0.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "5.3.5",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "2.0.5"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.27.3"
   }
 }

@@ -24,6 +24,7 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
           };
 
           if (!response.ok) return null;
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
           return (await response.json()) ?? null;
         },
       }),
