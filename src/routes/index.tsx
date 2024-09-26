@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { RenderContent } from "~/components/componentFactory/componentFactory";
 import { localMessages } from "~/data/localMessagesStore";
 import type { ChatMessage, BuilderContent } from "~/utils/types";
+import styles from "./styles.module.css";
 
 export default component$(() => {
   const chatState = useStore({
@@ -110,15 +111,18 @@ export default component$(() => {
   });
 
   return (
-    <div class="chat-container">
-      <div class="chat-history">
+    <div class={styles.container}>
+      <div class={styles.chatHistory}>
         {chatState.messages.map((msg, index) => (
-          <div key={index} class={msg.isUser ? "user-message" : "bot-message"}>
+          <div
+            key={index}
+            class={msg.isUser ? styles.userMessage : styles.botMessage}
+          >
             <RenderContent content={msg.content} onAction$={handleAction} />
           </div>
         ))}
       </div>
-      <div class="chat-input">
+      <div class={styles.chatInput}>
         <input
           type="text"
           value={chatState.inputValue}

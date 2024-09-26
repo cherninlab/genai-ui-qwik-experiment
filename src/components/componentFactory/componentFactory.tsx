@@ -11,18 +11,18 @@ import type {
   TimelineProps,
   InfoCardProps,
 } from "~/utils/types";
+import styles from "./styles.module.css";
 
 const Text = component$<TextProps>(({ text }) => {
-  return <p class="text-component">{text}</p>;
+  return <p>{text}</p>;
 });
 
 const ButtonGroup = component$<ButtonGroupProps>(({ buttons, onAction$ }) => {
   return (
-    <div class="button-group">
+    <div>
       {buttons.map((button, index) => (
         <button
           key={index}
-          class="btn"
           onClick$={() => (onAction$ ? onAction$(button.action) : null)}
         >
           {button.text}
@@ -34,11 +34,14 @@ const ButtonGroup = component$<ButtonGroupProps>(({ buttons, onAction$ }) => {
 
 const SkillChart = component$<SkillChartProps>(({ skills }) => {
   return (
-    <div class="skill-chart">
+    <div class={styles.skillChart}>
       {skills.map((skill, index) => (
-        <div key={index} class="skill-item">
-          <span class="skill-name">{skill.name}</span>
-          <div class="skill-bar" style={{ width: `${skill.level}%` }}></div>
+        <div key={index} class={styles.skillItem}>
+          <span class={styles.skillName}>{skill.name}</span>
+          <div
+            class={styles.skillBar}
+            style={{ width: `${skill.level}%` }}
+          ></div>
         </div>
       ))}
     </div>
@@ -47,11 +50,11 @@ const SkillChart = component$<SkillChartProps>(({ skills }) => {
 
 const Timeline = component$<TimelineProps>(({ events }) => {
   return (
-    <div class="timeline">
+    <div class={styles.timeline}>
       {events.map((event, index) => (
-        <div key={index} class="timeline-event">
-          <div class="event-date">{event.date}</div>
-          <div class="event-content">
+        <div key={index} class={styles.timelineEvent}>
+          <div class={styles.eventDate}>{event.date}</div>
+          <div>
             <h3>{event.title}</h3>
             {event.description && <p>{event.description}</p>}
           </div>
@@ -63,7 +66,7 @@ const Timeline = component$<TimelineProps>(({ events }) => {
 
 const InfoCard = component$<InfoCardProps>(({ title, items }) => {
   return (
-    <div class="info-card">
+    <div class={styles.infoCard}>
       <h2>{title}</h2>
       <ul>
         {items.map((item, index) => (

@@ -1,0 +1,57 @@
+.skillChart {
+    margin-top: 1rem;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skillName {
+    flex-basis: 30%;
+    font-weight: 500;
+}
+
+.skillBar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 4px;
+}
+
+.timeline {
+    margin-top: 1rem;
+}
+
+.timelineEvent {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-primary);
+}
+
+.eventDate {
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.infoCard {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.infoCard h2 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.infoCard ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.infoCard li {
+    margin-bottom: 0.25rem;
+}
