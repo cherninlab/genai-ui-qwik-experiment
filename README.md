@@ -18,7 +18,7 @@
 
 ## Running the Project
 
-- Development mode: `npm start` or `bun start`
+- Development mode: `npm run dev` or `bun run dev`
 - Production build: `npm run build` or `bun run build`
 - Preview production build: `npm run preview` or `bun run preview`
 
