@@ -70,7 +70,10 @@ export const localMessages: LocalMessage[] = [
               options: {
                 buttons: [
                   { text: "Web Dev Details", action: "show_web_dev_details" },
-                  { text: "Experience", action: "show_experience" },
+                  {
+                    text: "Tell me about flat earth",
+                    action: "Tell me about flat earth!!!",
+                  },
                   { text: "Education", action: "show_education" },
                 ],
               },

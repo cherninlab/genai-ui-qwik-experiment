@@ -26,6 +26,14 @@ Always maintain a professional and informative tone. Ensure your response can be
 
 export const parseAIResponse = (responseContent: string): BuilderContent => {
   try {
+    if (responseContent.startsWith("```json")) {
+      responseContent = responseContent.slice(7);
+    }
+
+    if (responseContent.endsWith("```")) {
+      responseContent = responseContent.slice(0, -3);
+    }
+
     return JSON.parse(responseContent);
   } catch (error) {
     console.error("Failed to parse AI response:", error);
