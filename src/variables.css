@@ -2,7 +2,7 @@
     /* Color palette */
     --color-primary: #3498db;
     --color-secondary: #2ecc71;
-    --color-background: #ffffff;
+    --color-background: #F3F3F3;
     --color-text: #333333;
     --color-text-light: #666666;
     --color-border: #e0e0e0;
@@ -22,6 +22,9 @@
 
     /* Transitions */
     --transition-speed: 0.3s;
+
+    /* Semantic Aliases */
+    --main-background: var(--color-background)
 }
 
 /* Dark theme */
